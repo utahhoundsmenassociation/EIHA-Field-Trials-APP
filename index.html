@@ -1,7 +1,7 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EIHA Field Trial Manager v9.1</title>
+<title>EIHA Field Trial Manager v9.2</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1E3A24">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -355,7 +355,7 @@ html,body{overflow-x:hidden;}
 <body>
 <div class="hdr">
   <div style="height:42px;min-width:42px;padding:0 11px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--green),var(--green-d));border:1.5px solid var(--orange-l);border-radius:9px;font-family:var(--fsc);font-weight:700;font-size:18px;letter-spacing:1px;color:#fff;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.3);">EIHA</div>
-  <div class="logo"><span class="logo-name">EIHA Field Trials</span><span class="logo-sub">Event Operations · v9.1</span></div>
+  <div class="logo"><span class="logo-name">EIHA Field Trials</span><span class="logo-sub">Event Operations · v9.2</span></div>
   <span class="mobile-nav-label" id="mobileNavLabel">Overview</span>
   <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileNav()" title="Menu">☰</button>
   <nav class="navw" id="mainNav">
@@ -989,7 +989,7 @@ html,body{overflow-x:hidden;}
     <div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:20px 24px;margin-bottom:20px;">
       <div style="font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--text3);margin-bottom:8px;">Designed &amp; Developed by</div>
       <div style="font-size:20px;font-weight:700;color:var(--text);margin-bottom:4px;">April Thatcher</div>
-      <div style="font-size:12px;color:var(--text2);">Version 9.1 &nbsp;·&nbsp; 2026</div>
+      <div style="font-size:12px;color:var(--text2);">Version 9.2 &nbsp;·&nbsp; 2026</div>
     </div>
     <div style="font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:20px;">
       This application was designed and developed by April Thatcher<br>
@@ -1001,7 +1001,7 @@ html,body{overflow-x:hidden;}
 </div>
 <!-- Footer Credit -->
 <div style="text-align:center;padding:18px;font-size:11px;color:var(--text3);border-top:1px solid var(--border);margin-top:10px;">
-  Designed &amp; developed by <strong style="color:var(--text2);">April Thatcher</strong> &nbsp;·&nbsp; Built for the Eastern Idaho Houndsmen Association &nbsp;·&nbsp; v9.1 © 2026
+  Designed &amp; developed by <strong style="color:var(--text2);">April Thatcher</strong> &nbsp;·&nbsp; Built for the Eastern Idaho Houndsmen Association &nbsp;·&nbsp; v9.2 © 2026
 </div>
 <script>
 const CE=['Puppy','Junior','Senior','Old Dog','Powderpuff','Kids'];
@@ -1017,7 +1017,7 @@ function heatTitle(h){const s=stageName(h);return s?`${s} (${h.label})`:h.label;
 // Display label for events/classes
 function evLabel(ev){return ev==='Bear Drag'?'Big Bear Race':ev==='Bear Pack'?'Bear Pack Races':ev;}
 const DD=[];
-const DH={'Puppy':[{label:'Heat 1',dogs:[]},{label:'Championship',dogs:[]}],'Junior':[{label:'Heat 1',dogs:[]},{label:'Championship',dogs:[]}],'Senior':[{label:'Heat 1',dogs:[]},{label:'Championship',dogs:[]}],'Old Dog':[{label:'Heat 1',dogs:[]},{label:'Championship',dogs:[]}],'Powderpuff':[{label:'Heat 1',dogs:[]},{label:'Championship',dogs:[]}],'Kids':[{label:'Heat 1',dogs:[]},{label:'Championship',dogs:[]}]};
+const DH={'Puppy':[],'Junior':[],'Senior':[],'Old Dog':[],'Powderpuff':[],'Kids':[]};
 const DP=[];
 let S=loadState();
 function mkDef(){return{dogs:JSON.parse(JSON.stringify(DD)),heats:JSON.parse(JSON.stringify(DH)),results:{},treeing:{},iron:{},drag:{},pack:JSON.parse(JSON.stringify(DP)),collars:{},dispStatus:{},dispOrder:[],scentDragEvery:4,eventDates:{dates:'TBD',year:'2026'},notes:'',importedSubs:[],contacts:{},raffles:[],memberships:[],importedMemberSubs:[]};}
@@ -5410,7 +5410,7 @@ function applyCustomHeats(){
   });
 });
 const MAIN_URL_KEY='eiha_main_script_url';
-const DEFAULT_MAIN_URL='https://script.google.com/macros/s/AKfycbzuI-o6jwjaVHhznueVVJ3w03DwWdJKlCrTdtTE6f3fBD185ZQjz-QvhgKCCzRIpLEy/exec';
+const DEFAULT_MAIN_URL='';
 // Use a saved override if set, otherwise fall back to the hardcoded default
 let mainScriptUrl=localStorage.getItem(MAIN_URL_KEY)||DEFAULT_MAIN_URL;
 let autoSyncInterval=null;
