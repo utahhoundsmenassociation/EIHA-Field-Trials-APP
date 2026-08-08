@@ -9,7 +9,7 @@
 
 // Bump this on every release. The activate step deletes any cache whose key
 // doesn't match, which is what clears out the previous version's files.
-const CACHE_NAME = 'eiha-trials-v13.5';
+const CACHE_NAME = 'eiha-trials-v13.6';
 const OFFLINE_URL = './index.html';
 
 // Must succeed or the app can't run offline at all.
